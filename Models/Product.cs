@@ -1,4 +1,4 @@
-﻿namespace Blinkit.SOLID.Models
+﻿namespace BlinkItSOLIDPrinciples.Models
 {
     // SRP: simple data holder for a product
     public class Product

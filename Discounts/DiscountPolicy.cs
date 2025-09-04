@@ -1,4 +1,4 @@
-﻿namespace Blinkit.SOLID.Discounts
+﻿namespace BlinkItSOLIDPrinciples.Discounts
 {
     // OCP/LSP: base class for different discount strategies
     public abstract class DiscountPolicy

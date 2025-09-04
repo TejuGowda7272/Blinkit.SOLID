@@ -1,8 +1,8 @@
-﻿using Blinkit.SOLID.Logging;
+﻿using BlinkItSOLIDPrinciples.Logging;
 using System;
 
 
-namespace Blinkit.SOLID.Payments
+namespace BlinkItSOLIDPrinciples.Payments
 {
     // LSP/OCP: additional payment processors can be added without changing consumers
     public class CardPayment : IPaymentProcessor

@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
-namespace Blinkit.SOLID.Models
+namespace BlinkItSOLIDPrinciples.Models
 {
     public class Order
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString();
-        public string UserId { get; set; } = string.Empty;
-        public List<CartItem> Items { get; set; } = new List<CartItem>();
+        private static int _counter = 1; // starting point for order numbers
+
+        public string Id { get; private set; }
+        public string UserId { get; set; }
+        public IEnumerable<CartItem> Items { get; set; }
         public decimal Amount { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public Order()
+        {
+            string datePrefix = DateTime.Now.ToString("yyyyMMdd"); // e.g. 20250904
+            Id = $"{datePrefix}-ORD{_counter++}";
+        }
     }
 }

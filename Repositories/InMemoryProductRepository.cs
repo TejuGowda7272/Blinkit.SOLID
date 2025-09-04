@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Blinkit.SOLID.Models;
+using BlinkItSOLIDPrinciples.Models;
 
 
-namespace Blinkit.SOLID.Repositories
+namespace BlinkItSOLIDPrinciples.Repositories
 {
     public class InMemoryProductRepository : IProductRepository
     {

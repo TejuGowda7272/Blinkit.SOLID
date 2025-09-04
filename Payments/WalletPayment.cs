@@ -1,7 +1,7 @@
-﻿using Blinkit.SOLID.Logging;
+﻿using BlinkItSOLIDPrinciples.Logging;
 
 
-namespace Blinkit.SOLID.Payments
+namespace BlinkItSOLIDPrinciples.Payments
 {
     public class WalletPayment : IPaymentProcessor
     {

@@ -1,11 +1,10 @@
-﻿using Blinkit.SOLID.Audit;
-using Blinkit.SOLID.Models;
-using Blinkit.SOLID.Repositories;
-using Blinkit.SOLID.Audit;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using BlinkItSOLIDPrinciples.Models;
+using BlinkItSOLIDPrinciples.Audit;
+using BlinkItSOLIDPrinciples.Repositories;
 
-namespace Blinkit.SOLID.Services
+namespace BlinkItSOLIDPrinciples.Services
 {
     // SRP: manages stock only; depends on repo + audit (DIP)
     public class InventoryService : IInventoryService

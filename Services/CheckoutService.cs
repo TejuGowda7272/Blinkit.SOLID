@@ -1,14 +1,14 @@
-﻿using Blinkit.SOLID.Discounts;
-using Blinkit.SOLID.Logging;
-using Blinkit.SOLID.Models;
-using Blinkit.SOLID.Notifications;
-using Blinkit.SOLID.Payments;
-using Blinkit.SOLID.Repositories;
-using Blinkit.SOLID.Services;
-using Blinkit.SOLID.Audit;
+﻿using BlinkItSOLIDPrinciples.Models;
 using System.Linq;
+using BlinkItSOLIDPrinciples.Repositories;
+using BlinkItSOLIDPrinciples.Models;
+using BlinkItSOLIDPrinciples.Discounts;
+using BlinkItSOLIDPrinciples.Payments;
+using BlinkItSOLIDPrinciples.Audit;
+using BlinkItSOLIDPrinciples.Logging;
+using BlinkItSOLIDPrinciples.Notifications;
 
-namespace BlinkitSOLID.Services
+namespace BlinkItSOLIDPrinciples.Services
 {
     // High-level service: depends only on abstractions (DIP)
     public class CheckoutService : ICheckoutService

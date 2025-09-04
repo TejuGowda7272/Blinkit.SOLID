@@ -1,8 +1,8 @@
-﻿using Blinkit.SOLID.Models;
+﻿using BlinkItSOLIDPrinciples.Models;
 using System.Collections.Generic;
 
 
-namespace Blinkit.SOLID.Repositories
+namespace BlinkItSOLIDPrinciples.Repositories
 {
     public interface IOrderRepository
     {

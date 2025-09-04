@@ -1,9 +1,6 @@
-﻿
+﻿using BlinkItSOLIDPrinciples.Logging;
 
-
-using Blinkit.SOLID.Logging;
-
-namespace Blinkit.SOLID.Notifications
+namespace BlinkItSOLIDPrinciples.Notifications
 {
     public class SmsSender : ISmsSender
     {

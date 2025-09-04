@@ -1,8 +1,8 @@
-﻿using Blinkit.SOLID.Models;
-using Blinkit.SOLID.Services;
-using BlinkitSOLID.Services;
+﻿using BlinkItSOLIDPrinciples.Services;
+using BlinkItSOLIDPrinciples.Models;
+using BlinkItSOLIDPrinciples.Repositories;
 
-namespace Blinkit.SOLID.Services
+namespace BlinkItSOLIDPrinciples.Services
 {
     public static class InventoryServiceExtensions
     {
@@ -11,7 +11,7 @@ namespace Blinkit.SOLID.Services
             // This uses the repository internally; it's safe for demo purposes
             var repoField = typeof(IInventoryService).GetField("_repo", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             if (repoField == null) return null;
-            var repo = repoField.GetValue(inv) as Blinkit.SOLID.Repositories.IProductRepository;
+            var repo = repoField.GetValue(inv) as IProductRepository;
             return repo?.GetById(productId);
         }
     }

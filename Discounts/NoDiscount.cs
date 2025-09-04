@@ -1,4 +1,4 @@
-﻿namespace Blinkit.SOLID.Discounts
+﻿namespace BlinkItSOLIDPrinciples.Discounts
 {
     public class NoDiscount : DiscountPolicy
     {

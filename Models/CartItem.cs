@@ -1,4 +1,4 @@
-﻿namespace Blinkit.SOLID.Models
+﻿namespace BlinkItSOLIDPrinciples.Models
 {
     public class CartItem
     {

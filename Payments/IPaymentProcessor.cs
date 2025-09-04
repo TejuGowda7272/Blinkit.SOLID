@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blinkit.SOLID.Payments
+namespace BlinkItSOLIDPrinciples.Payments
 {
     // DIP: checkout depends on this abstraction, not concrete payment implementations
     public interface IPaymentProcessor

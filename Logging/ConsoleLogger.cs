@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Blinkit.SOLID.Logging
+namespace BlinkItSOLIDPrinciples.Logging
 {
     public class ConsoleLogger : ILogger
     {

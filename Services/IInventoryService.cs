@@ -1,7 +1,7 @@
-﻿using Blinkit.SOLID.Models;
+﻿using BlinkItSOLIDPrinciples.Models;
 using System.Collections.Generic;
 
-namespace Blinkit.SOLID.Services
+namespace BlinkItSOLIDPrinciples.Services
 {
     public interface IInventoryService
     {

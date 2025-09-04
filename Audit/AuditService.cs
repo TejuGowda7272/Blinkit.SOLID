@@ -16,10 +16,9 @@ namespace BlinkItSOLIDPrinciples.Audit
 
         public void Record(string message)
         {
-            string logEntry = $"{DateTime.Now:HH:mm:ss} - {message}";
+            string logEntry = $"[AUDIT] {DateTime.Now:HH:mm:ss} → {message}";
             _entries.Add(logEntry);
 
-            // Optional: also log it
             _logger.Log($"[AUDIT] {message}");
         }
 

@@ -38,10 +38,8 @@ namespace BlinkItSOLIDPrinciples
 
 
             // Force Indian culture for ₹
-            CultureInfo culture = new CultureInfo("en-IN");
-            Thread.CurrentThread.CurrentCulture = culture;
-            Thread.CurrentThread.CurrentUICulture = culture;
-
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-IN");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-IN");
 
             // OCP: switch discount policy easily
             DiscountPolicy discount = new FestiveDiscount(0.15m); // 15% off for festival season
@@ -59,8 +57,8 @@ namespace BlinkItSOLIDPrinciples
                 new CartItem { ProductId = "p2", Quantity = 1 }  // Bread
             };
 
-            Console.WriteLine("=== User 1 placing order with Card Payment ===\n");
-            checkout.PlaceOrder("user_123", cart1);
+            Console.WriteLine("=== Teju Gowda placing order with Card Payment ===\n");
+            checkout.PlaceOrder("Teju Gowda", cart1);
 
             // --- Simulate User 2 cart with Wallet Payment ---
             var checkoutWithWallet = new CheckoutService(

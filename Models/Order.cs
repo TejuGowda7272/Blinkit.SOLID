@@ -14,7 +14,7 @@ namespace BlinkItSOLIDPrinciples.Models
 
         public Order()
         {
-            string datePrefix = DateTime.Now.ToString("yyyyMMdd"); // e.g. 20250904
+            string datePrefix = DateTime.Now.ToString("ddMMyyyy"); // e.g. 04092025
             Id = $"{datePrefix}-ORD{_counter++}";
         }
     }

@@ -1,7 +1,5 @@
 ﻿using BlinkItSOLIDPrinciples.Models;
-using System.Linq;
 using BlinkItSOLIDPrinciples.Repositories;
-using BlinkItSOLIDPrinciples.Models;
 using BlinkItSOLIDPrinciples.Discounts;
 using BlinkItSOLIDPrinciples.Payments;
 using BlinkItSOLIDPrinciples.Audit;
@@ -45,7 +43,10 @@ namespace BlinkItSOLIDPrinciples.Services
         public void PlaceOrder(string userId, IEnumerable<CartItem> cart)
         {
             var items = cart.ToList();
-            _logger.Log($"Checkout started for {userId}");
+            _logger.Log("\n-------------------------------");
+            _logger.Log($"🛒 Starting Checkout for {userId}");
+            _logger.Log("-------------------------------\n");
+
 
             // 1. Reserve stock
             if (!_inventory.Reserve(items))
@@ -80,7 +81,7 @@ namespace BlinkItSOLIDPrinciples.Services
             _sms.Send(userId, $"Order {order.Id} placed successfully. Amount = {finalAmount:C}");
 
             // 6. Log success
-            _logger.Log($"✅ Checkout completed. OrderId: {order.Id}");
+            _logger.Log($"\n✅ Order Completed Successfully for {userId}\n");
             _audit.Record($"Checkout completed for {userId}. OrderId: {order.Id}");
         }
     }
